@@ -1,0 +1,28 @@
+<ion-view title="{{ user.name }}">
+	<ion-content class="content-stable"
+                 on-swipe-left="hideTime = false"
+                 on-swipe-right="hideTime = true">
+
+      <div class="card">
+
+          <a class="item item-text-wrap" data-ng-repeat="msg in messages" href="#">
+            <h2>{{ msg.name }}</h2>
+            <p>{{ msg.message }}</p>
+          </a>
+
+          
+
+      </div>
+
+    </ion-content>
+
+	<ion-footer-bar class="bar-stable item-input-inset">
+      <label class="item-input-wrapper">
+        <textarea placeholder="Type your message" data-ng-model="message"></textarea>
+      </label>
+      <button class="button button-clear" data-ng-click="sendMessage()">
+        <i class="icon ion-paper-airplane"></i>
+      </button>
+    </ion-footer-bar>
+
+</ion-view>
